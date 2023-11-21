@@ -1,0 +1,28 @@
+//Mendapat Semua Data Presensi --(GET)
+GET http://localhost:5000/presensi
+
+###
+//Mendapatkan Satu Data Presensi By PrimaryKey --(GET)
+GET http://localhost:5000/presensi/1
+
+###
+//Mendapatkan Satu Data Presensi By ForeignKey --(POST)
+POST http://localhost:5000/presensi-foreign
+Content-Type: application/json
+
+{
+    "presensiId": "1"
+}
+
+
+###
+//Menambahkan Data Presensi --(POST)
+POST http://localhost:5000/presensi
+Content-Type: application/json
+
+{
+    "nama": "taufik",
+    "jenis_presensi": "izin",
+    "keterangan": "izin acara keluarga",
+    "presensiId": "1"
+}

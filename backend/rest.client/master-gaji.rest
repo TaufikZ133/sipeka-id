@@ -1,0 +1,33 @@
+//Mendapat Semua Data Master Gaji --(GET)
+GET http://localhost:5000/master-gaji
+
+###
+//Menambahkan Data Master Gaji --(POST)
+POST http://localhost:5000/master-gaji
+Content-Type: application/json
+
+{
+    "jabatan": "karyawan",
+    "gaji_perbulan": 3000000,
+    "gaji_perhari": 120000,
+    "tunjangan_tetap": 100000,
+    "tunjangan_tidak_tetap": 100000,
+    "pph21": 5,
+    "denda": 0,
+    "pendapatan_bersih": 3004000
+}
+
+###
+//Mengupdate Data Master Gaji--(PATCH)
+PATCH http://localhost:5000/master-gaji/1
+Content-Type: application/json
+
+{
+    "jabatan": "manager",
+    "gaji_perbulan": 8000000,
+    "gaji_perhari": 320000
+}
+
+###
+//Menghapus Data Master Gaji --(DELETE)
+DELETE http://localhost:5000/master-gaji/2

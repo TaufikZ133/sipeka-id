@@ -1,0 +1,45 @@
+//Register Akun Admin
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "nama": "admin",
+    "email": "admin@gmail.com",
+    "password" : "admin",
+    "confPassword" : "admin"
+}
+
+###
+//Login Sebagai Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password" : "admin"
+}
+
+###
+//Logout Admin
+DELETE http://localhost:5000/logout
+
+###
+//Mendapatkan Data Admin Menggunakan Token
+POST  http://localhost:5000/admin
+
+###
+//Mendapatkan Token
+GET http://localhost:5000/token
+
+###
+//Mendapatkan Data Admin Menggunakan ID
+GET http://localhost:5000/admin/1
+
+###
+PATCH http://localhost:5000/password-admin/1
+Content-Type: application/json
+
+{
+    "oldPassword": "123456",
+    "password" : "admin"
+}

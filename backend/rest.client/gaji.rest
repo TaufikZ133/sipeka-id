@@ -1,0 +1,132 @@
+//Mendapat Semua Data Gaji --(GET)
+GET http://localhost:5000/gaji
+
+###
+//Mendapatkan Satu Data Gaji By PrimaryKey --(GET)
+GET http://localhost:5000/gaji/1
+
+###
+//Mendapatkan Satu Data Gaji By ForeignKey --(POST)
+POST http://localhost:5000/gaji-foreign
+Content-Type: application/json
+
+{
+    "gajiId": "1"
+}
+
+
+###
+//Menambahkan Data Gaji --(POST)
+POST http://localhost:5000/gaji
+Content-Type: application/json
+
+{
+    "nama": "Taufik",
+    "nik": "2013201001",
+    "jabatan": "Karyawan",
+    "departemen": "Developer",
+    "bulan_penggajian": "Februari",
+    "gaji_pokok": "Rp.5.000.000",
+    "lembur": "Rp.100.000",
+    "tunjangan": "Rp.100.000",
+    "total_pendapatan": "Rp.5.200.000",
+    "pph21": "Rp.100.000",
+    "bpjs": "Rp.100.000",
+    "denda_pelanggaran": "Rp.100.000",
+    "total_pengurangan": "Rp.300.000",
+    "penerimaan_bersih": "Rp.4.900.000",
+    "keterangan": "Gaji sudah terverifikasi",
+    "gajiId": "1"
+}
+
+###
+//Menupdate Data Gaji --(POST)
+PATCH  http://localhost:5000/gaji/2
+Content-Type: application/json
+
+{
+    "nama": "Zaidan",
+    "nik": "2013201001",
+    "jabatan": "Karyawan",
+    "departemen": "Developer",
+    "bulan_penggajian": "Februari",
+    "gaji_pokok": "Rp.5.000.000",
+    "lembur": "Rp.100.000",
+    "tunjangan": "Rp.100.000",
+    "total_pendapatan": "Rp.5.200.000",
+    "pph21": "Rp.100.000",
+    "bpjs": "Rp.100.000",
+    "denda_pelanggaran": "Rp.0",
+    "total_pengurangan": "Rp.300.000",
+    "penerimaan_bersih": "Rp.5.000.000",
+    "keterangan": "Gaji sudah terverifikasi",
+    "gajiId": "2"
+}
+
+###
+//Mengahpus Satu Data Gaji --(DELETE)
+DELETE http://localhost:5000/gaji/2
+
+###
+//Menambahkan Batch Data Gaji --(POST)
+POST http://localhost:5000/bulk-gaji
+Content-Type: application/json
+
+{
+    "arrayGaji" : [
+        {
+            "nama": "sarah",
+            "nik": "2013201004",
+            "jabatan": "Pegawai",
+            "departemen": "Teknologi",
+            "bulan_penggajian": "Agustus 2023",
+            "gaji_pokok": "Rp.1.000.000",
+            "lembur": "Rp.1.000.000",
+            "tunjangan": "Rp.1.000.000",
+            "total_pendapatan": "Rp.1.000.000",
+            "pph21": "Rp.1.000.000",
+            "bpjs": "Rp.1.000.000",
+            "denda_pelanggaran": "Rp.1.000.000",
+            "total_pengurangan": "Rp.1.000.000",
+            "penerimaan_bersih": "Rp.1.000.000",
+            "keterangan": "Rp.1.000.000",
+            "gajiId" : 12
+        },
+        {
+            "nama": "sarah",
+            "nik": "2013201004",
+            "jabatan": "Pegawai",
+            "departemen": "Teknologi",
+            "bulan_penggajian": "Agustus 2023",
+            "gaji_pokok": "Rp.1.000.000",
+            "lembur": "Rp.1.000.000",
+            "tunjangan": "Rp.1.000.000",
+            "total_pendapatan": "Rp.1.000.000",
+            "pph21": "Rp.1.000.000",
+            "bpjs": "Rp.1.000.000",
+            "denda_pelanggaran": "Rp.1.000.000",
+            "total_pengurangan": "Rp.1.000.000",
+            "penerimaan_bersih": "Rp.1.000.000",
+            "keterangan": "Rp.1.000.000",
+            "gajiId" : 12
+        },
+        {
+            "nama": "sarah",
+            "nik": "2013201004",
+            "jabatan": "Pegawai",
+            "departemen": "Teknologi",
+            "bulan_penggajian": "Agustus 2023",
+            "gaji_pokok": "Rp.1.000.000",
+            "lembur": "Rp.1.000.000",
+            "tunjangan": "Rp.1.000.000",
+            "total_pendapatan": "Rp.1.000.000",
+            "pph21": "Rp.1.000.000",
+            "bpjs": "Rp.1.000.000",
+            "denda_pelanggaran": "Rp.1.000.000",
+            "total_pengurangan": "Rp.1.000.000",
+            "penerimaan_bersih": "Rp.1.000.000",
+            "keterangan": "Rp.1.000.000",
+            "gajiId" : 12
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+//Register Akun Karyawan
+POST http://localhost:5000/daftar
+Content-Type: application/json
+
+{
+    "email": "dummy@gmail.com",
+    "nama" : "dummy",
+    "password" : "dummy",
+    "confPassword" : "dummy"
+}
+
+###
+//Login Sebagai Taufik
+POST http://localhost:5000/masuk
+Content-Type: application/json
+
+{
+    "email": "taufik@gmail.com",
+    "password" : "taufik"
+}
+
+###
+//Login Sebagai Faishal
+POST http://localhost:5000/masuk
+Content-Type: application/json
+
+{
+    "email": "pegawai@gmail.com",
+    "password" : "123456"
+}
+
+###
+//Get Karyawan Id (satu)
+GET http://localhost:5000/karyawan/1
+Authorization: Bearer 
+
+###
+//Forget Password
+POST http://localhost:5000/forget
+Content-Type: application/json
+
+{
+    "email": "email"
+}
+
+###
+//Get Karyawan (Satu)
+POST  http://localhost:5000/karyawan
+
+###
+//      LOGOUT             //
+DELETE http://localhost:5000/keluar
+
+###
+//Get COOKIE
+GET http://localhost:5000/cookie
+
+###
+PATCH http://localhost:5000/update-karyawan/1
+Content-Type: application/json
+
+{
+    "nama": "Taufik",
+    "nik": "2013201002",
+    "status": "Mahasiswa",
+    "jabatan": "Karyawan",
+    "departemen": "Developer",
+    "jenis_kelamin": "Laki-laki",
+    "tempat_tanggal_lahir": "Bandung 13 Maret 2001",
+    "kewarganegaraan": "Indonesia",
+    "nomer_hp": "081313121427",
+    "agama": "Islam",
+    "golongan_darah": "A",
+    "alamat": "Jalan Puyuh Dalam 2 No.34",
+    "kota": "Bandung",
+    "provinsi": "Jawa Barat",
+    "kode_pos": "40131",
+    "asal_sd": "SDN Tilil 1",
+    "asal_smp": "SMPN 16",
+    "asal_sma": "SMKN 2",
+    "perguruan_tinggi": "Universitas Sangga Buana",
+    "jurusan_prodi": "Teknik Informatika",
+    "nama_ayah": "Yudi",
+    "nama_ibu": "Lilis",
+    "nama_suamiistri": "",
+    "jumlah_anak": "0",
+    "saudara_kandung": "1",
+    "telepon_keluarga": "081313121427",
+    "pas_foto": "foto.png",
+    "foto_ktp": "ktp.png",
+    "foto_kk": "kk.png",
+    "foto_ijazah": "ijazah.png"
+}
+
+###
+GET http://localhost:5000/karyawan
+
+
+###
+DELETE http://localhost:5000/karyawan/5
+
+###
+PATCH http://localhost:5000/password-karyawan/1
+Content-Type: application/json
+
+{
+    "oldPassword": "taufik",
+    "password" : "123456"
+}
+
+###
+//Mendapatkan Satu Data Karyawan By Jabatan --(POST)
+POST http://localhost:5000/karyawan-jabatan
+Content-Type: application/json
+
+{
+    "jabatan": "karyawan"
+}
